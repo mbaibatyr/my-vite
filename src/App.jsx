@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Button } from "antd";
 import "./App.css";
 
 const App = () => {
@@ -30,11 +29,13 @@ const App = () => {
       <button onClick={() => setVal(val + 1)}>Кнопка1</button>
       <button onClick={() => setVal2(val2 + 1)}>Кнопка2</button>
       <ul>
-        {arr.map((z) => (
-          <li>{z}</li>
+        {arr.map((z, index) => (
+          <li key={index}>{z}</li>
         ))}
       </ul>
-      <button onClick={() => setArr(["4", ...arr, "5"])}>Кнопка3</button>
+      <Button type="dashed" onClick={() => setArr(["4", ...arr, "5"])}>
+        Кнопка3
+      </Button>
     </>
   );
 };
