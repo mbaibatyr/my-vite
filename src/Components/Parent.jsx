@@ -1,14 +1,14 @@
 import React from "react";
-import { useMyContext } from "./MyContext";
+//import { useMyContext } from "./MyContext";
 import Child from "./Child";
 
 const Parent = () => {
-  const data = useMyContext();
+  //const data = useMyContext();
 
   return (
     <div>
       <h1>Parent Component</h1>
-      <p>Data from context: {data}</p>
+      {/* <p>Data from context: {data}</p> */}
       <Child />
     </div>
   );

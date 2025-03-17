@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Button, Select } from "antd";
 import "./App.css";
+import Parent from "./Components/Parent";
 //import { MyComp, Multiply } from "./Functions";
 //import * as f from "./Functions";
 
-import MyDefault, { MyComp, Multiply } from "./Functions";
+//import MyDefault, { MyComp, Multiply } from "./Functions";
 const App = () => {
   // const [val, setVal] = useState(0);
   // const [val2, setVal2] = useState(0);
@@ -26,11 +27,12 @@ const App = () => {
   //   console.log("Компонент изменился2");
   // });
 
-  let a = "50";
+  // let a = "50";
   //const res = f.Multiply(a, 8);
   return (
     <>
-      <MyDefault name="STEP" />
+      <Parent />
+      {/* <MyDefault name="STEP" /> */}
 
       {/* <f.MyCompList count={100} /> */}
       {/* <Select
