@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { Button, Select } from "antd";
 import "./App.css";
 //import { MyComp, Multiply } from "./Functions";
-import * as f from "./Functions";
+//import * as f from "./Functions";
 
+import MyDefault, { MyComp, Multiply } from "./Functions";
 const App = () => {
   // const [val, setVal] = useState(0);
   // const [val2, setVal2] = useState(0);
@@ -26,12 +27,15 @@ const App = () => {
   // });
 
   let a = "50";
-  const res = f.Multiply(a, 8);
+  //const res = f.Multiply(a, 8);
   return (
     <>
-      <Select
+      <MyDefault name="STEP" />
+
+      {/* <f.MyCompList count={100} /> */}
+      {/* <Select
         style={{
-          width: 500,
+          width: 200,
         }}
         placeholder="Choose City"
         showSearch
@@ -45,7 +49,7 @@ const App = () => {
         {f.Files.map((z) => (
           <Option key={z.id}>{z.name}</Option>
         ))}
-      </Select>
+      </Select> */}
 
       {/* {res}
       <f.MyComp a={5} b={6} /> */}
