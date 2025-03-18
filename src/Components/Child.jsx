@@ -1,10 +1,15 @@
 import React from "react";
 
-const Child = ({ onData }) => {
-  const sendDataToParent = () => {
-    onData("Привет от ребенка!");
+const Child = ({ sendMessage }) => {
+  const handleClick = () => {
+    // Отправка данных родителю через callback
+    sendMessage("Hello from child!");
   };
-  return <button onClick={sendDataToParent}>Отправить данные родителю</button>;
+  return (
+    <div>
+      <button onClick={handleClick}>Send message to parent</button>
+    </div>
+  );
 };
 
 export const Child2 = ({ setInputValue }) => {

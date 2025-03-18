@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 //import { useMyContext } from "./MyContext";
-import Child from "./Child";
+import Child, { Child2 } from "./Child";
 
 const Parent = () => {
-  //const data = useMyContext();
+  const [message, setMessage] = useState("");
+  const handleMessage = (childMessage) => {
+    setMessage(childMessage);
+  };
 
   return (
     <div>
-      <h1>Parent Component</h1>
-      {/* <p>Data from context: {data}</p> */}
-      <Child />
+      <h1>Message from child: {message}</h1>
+      <Child sendMessage={handleMessage} />
+      <Child2 setInputValue={handleMessage} />
     </div>
   );
 };
