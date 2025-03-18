@@ -10,9 +10,13 @@ export function Divide(a, b) {
   return a / b;
 }
 
-export function MyDefault(name) {
-  return <h2>Hello {name}</h2>;
-}
+export const MyDefault = (props) => {
+  return <h2>Hello {props.name}</h2>;
+};
+
+export default function MyDefault2 (props){
+  return <h2>Hello from MyDefault2 {props.name}</h2>;
+};
 
 export const Files = [
   { id: "1", name: "Almaty" },
