@@ -4,6 +4,7 @@ import "./App.css";
 import Parent from "./Components/Parent";
 import MyDefault2, { MyDefault } from "./Functions";
 import P from "./Components/P";
+import MyRender from "./Components/MyRender";
 
 //import { MyComp, Multiply } from "./Functions";
 //import * as f from "./Functions";
@@ -34,6 +35,7 @@ const App = () => {
   //const res = f.Multiply(a, 8);
   return (
     <>
+      {/* <MyRender num={-15} /> */}
       {/* <P /> */}
       <Parent />
       {/* <MyDefault name="STEP123" />
