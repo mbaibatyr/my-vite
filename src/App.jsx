@@ -5,6 +5,8 @@ import Parent from "./Components/Parent";
 import MyDefault2, { MyDefault } from "./Functions";
 import P from "./Components/P";
 import MyRender from "./Components/MyRender";
+import MyUseEffect from "./Components/MyUseEffect";
+import MyTable from "./Components/MyTable";
 
 //import { MyComp, Multiply } from "./Functions";
 //import * as f from "./Functions";
@@ -35,13 +37,13 @@ const App = () => {
   //const res = f.Multiply(a, 8);
   return (
     <>
+      <MyTable />
+      {/* <MyUseEffect /> */}
       {/* <MyRender num={-15} /> */}
       {/* <P /> */}
-      <Parent />
+      {/* <Parent /> */}
       {/* <MyDefault name="STEP123" />
-
       <MyDefault2 name="STEP1235666565" /> */}
-
       {/* <f.MyCompList count={100} /> */}
       {/* <Select
         style={{
