@@ -3,6 +3,7 @@ import { Button, Select } from "antd";
 import "./App.css";
 import Parent from "./Components/Parent";
 import MyDefault2, { MyDefault } from "./Functions";
+import P from "./Components/P";
 
 //import { MyComp, Multiply } from "./Functions";
 //import * as f from "./Functions";
@@ -33,10 +34,11 @@ const App = () => {
   //const res = f.Multiply(a, 8);
   return (
     <>
-      {/* <Parent /> */}
-      <MyDefault name="STEP123" />
+      {/* <P /> */}
+      <Parent />
+      {/* <MyDefault name="STEP123" />
 
-      <MyDefault2 name="STEP1235666565" />
+      <MyDefault2 name="STEP1235666565" /> */}
 
       {/* <f.MyCompList count={100} /> */}
       {/* <Select

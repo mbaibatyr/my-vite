@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Child = ({ sendMessage }) => {
-  const handleClick = () => {
-    // Отправка данных родителю через callback
-    sendMessage("Hello from child!");
+const Child = ({ onData }) => {
+  const [inputValue, setInputValue] = useState("");
+  // Функция, которая отправит данные родителю
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleSubmit = () => {
+    // Передаем данные родительскому компоненту
+    onData(inputValue);
   };
   return (
     <div>
-      <button onClick={handleClick}>Send message to parent</button>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={handleInputChange}
+        placeholder="Enter some text"
+      />
+      <button onClick={handleSubmit}>Send to Parent</button>
     </div>
   );
 };

@@ -3,16 +3,29 @@ import React, { useState } from "react";
 import Child, { Child2 } from "./Child";
 
 const Parent = () => {
-  const [message, setMessage] = useState("");
-  const handleMessage = (childMessage) => {
-    setMessage(childMessage);
-  };
+  const [data, setData] = useState("");
+  const [value, setValue] = useState("");
 
+  const handleData = (newData) => {
+    setData(newData);
+  };
+  const [inputValue, setInputValue] = useState("");
   return (
     <div>
-      <h1>Message from child: {message}</h1>
-      <Child sendMessage={handleMessage} />
-      <Child2 setInputValue={handleMessage} />
+      <h1>Parent Component</h1>
+      <h1>Current value: {value}</h1>
+      <button onClick={() => setValue(value === "world" ? "step" : "world")}>
+        Toggle Theme
+      </button>
+      <h1>Data from Child: {data}</h1>
+      <Child onData={handleData} />
+      <br />
+      {/* <Child3 /> */}
+      <br />
+      <br />
+      <p>Значение: {inputValue}</p>
+      <Child2 setInputValue={setInputValue} />
+      {/* <button onClick={handleLogin}>Login</button> */}
     </div>
   );
 };
