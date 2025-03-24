@@ -7,6 +7,7 @@ import P from "./Components/P";
 import MyRender from "./Components/MyRender";
 import MyUseEffect from "./Components/MyUseEffect";
 import MyTable from "./Components/MyTable";
+import MyUseRef from "./Components/MyUseRef";
 
 //import { MyComp, Multiply } from "./Functions";
 //import * as f from "./Functions";
@@ -37,7 +38,8 @@ const App = () => {
   //const res = f.Multiply(a, 8);
   return (
     <>
-      <MyTable />
+      <MyUseRef />
+      {/* <MyTable /> */}
       {/* <MyUseEffect /> */}
       {/* <MyRender num={-15} /> */}
       {/* <P /> */}
