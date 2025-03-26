@@ -38,10 +38,10 @@ const App = () => {
   //const res = f.Multiply(a, 8);
   return (
     <>
-      <MyUseRef />
-      {/* <MyTable /> */}
+      {/* <MyUseRef /> */}
+      <MyTable />
       {/* <MyUseEffect /> */}
-      {/* <MyRender num={-15} /> */}
+      {/* <MyRender num={-150} /> */}
       {/* <P /> */}
       {/* <Parent /> */}
       {/* <MyDefault name="STEP123" />

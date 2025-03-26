@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 const Child = ({ onData }) => {
   const [inputValue, setInputValue] = useState("");
   // Функция, которая отправит данные родителю
