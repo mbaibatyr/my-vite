@@ -23,6 +23,34 @@ const MyTable = () => {
     },
   ];
 
+  const columns2 = [
+    {
+      title: "Id",
+      dataIndex: "id",
+      key: "id",
+    },
+    {
+      title: "Profile",
+      dataIndex: "profile_image",
+      key: "profile_image",
+    },
+    {
+      title: "Employee name",
+      dataIndex: "employee_name",
+      key: "employee_name",
+    },
+    {
+      title: "Employee salary",
+      dataIndex: "employee_salary",
+      key: "employee_salary",
+    },
+    {
+      title: "Employee age",
+      dataIndex: "employee_age",
+      key: "employee_age",
+    },
+  ];
+
   const fetchAll = () => {
     //setLoading2(true);
     const requestOptions = {
