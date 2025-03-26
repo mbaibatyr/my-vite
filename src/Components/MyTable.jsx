@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table, Tag } from "antd";
+import { Table, Tag, Select } from "antd";
 import { Employees, Files } from "../Functions";
 import "./table.css";
 
@@ -52,6 +52,11 @@ const MyTable = () => {
     },
   ];
 
+  const [age, setAge] = useState("");
+  const handleChangeAge = (value) => {
+    setAge(value);
+    //console.log(value);
+  };
   const [data, setData] = useState([]);
 
   // const fetchAll = () => {
@@ -78,6 +83,21 @@ const MyTable = () => {
     //setLoading2(true);
     setData(Employees.data);
   };
+
+  const Filter = () => {
+    switch (age) {
+      case "0":
+        setData(Employees.data);
+        break;
+
+      case "2":
+        setData(Employees.data.filter((z) => z.employee_age == 61));
+        break;
+
+      default:
+        break;
+    }
+  };
   useEffect(() => {
     //fetchAll();
     fetchAll2();
@@ -93,6 +113,29 @@ const MyTable = () => {
         size="small"
         pagination={false}
       />
+      <Select
+        style={{
+          width: 170,
+        }}
+        // value={age}
+        showSearch
+        status="success"
+        defaultValue="ALL"
+        optionFilterProp="children"
+        onChange={handleChangeAge}
+        filterOption={(input, option) =>
+          option.children.toLowerCase().includes(input.toLowerCase())
+        }
+      >
+        <Option key="0">ALL</Option>
+        <Option key="2">21-30</Option>
+        <Option key="3">31-40</Option>
+        <Option key="4">41-50</Option>
+        <Option key="5">51-60</Option>
+        <Option key="6">61-70</Option>
+      </Select>
+
+      <button onClick={Filter}>Filter</button>
       <Table
         className="table-striped-rows"
         style={{ width: 800 }}
