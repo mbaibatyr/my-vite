@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Table, Tag } from "antd";
 import { Files } from "../Functions";
+import "./table.css";
 
 const MyTable = () => {
   let columns = [
@@ -88,6 +89,7 @@ const MyTable = () => {
         pagination={false}
       />
       <Table
+        className="table-striped-rows"
         style={{ width: 800 }}
         rowKey={(row) => row.id}
         columns={columns2}
