@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Table, Tag } from "antd";
 import { Files } from "../Functions";
 
@@ -51,6 +51,8 @@ const MyTable = () => {
     },
   ];
 
+  const [data, setData] = useState([]);
+
   const fetchAll = () => {
     //setLoading2(true);
     const requestOptions = {
@@ -62,10 +64,13 @@ const MyTable = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        console.log(data.data);
+        setData(data.data);
         //setLoading2(false);
-        //setDataLog(data);
         //setQty2('Найдено: ' + data.length);
+      })
+      .catch((error) => {
+        console.log("error: " + error);
       });
   };
 
@@ -80,6 +85,14 @@ const MyTable = () => {
         style={{ width: 100 }}
         columns={columns}
         dataSource={Files}
+        size="small"
+        pagination={false}
+      />
+      <Table
+        style={{ width: 800 }}
+        rowKey={(row) => row.id}
+        columns={columns2}
+        dataSource={data}
         size="small"
         pagination={false}
       />
