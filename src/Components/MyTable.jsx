@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table, Tag } from "antd";
-import { Files } from "../Functions";
+import { Employees, Files } from "../Functions";
 import "./table.css";
 
 const MyTable = () => {
@@ -54,28 +54,33 @@ const MyTable = () => {
 
   const [data, setData] = useState([]);
 
-  const fetchAll = () => {
-    //setLoading2(true);
-    const requestOptions = {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    };
-    fetch(`https://dummy.restapiexample.com/api/v1/employees`, requestOptions)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setData(data.data);
-        //setLoading2(false);
-        //setQty2('Найдено: ' + data.length);
-      })
-      .catch((error) => {
-        console.log("error: " + error);
-      });
-  };
+  // const fetchAll = () => {
+  //   //setLoading2(true);
+  //   const requestOptions = {
+  //     method: "GET",
+  //     headers: { "Content-Type": "application/json" },
+  //   };
+  //   fetch(`https://dummy.restapiexample.com/api/v1/employees`, requestOptions)
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setData(data.data);
+  //       //setLoading2(false);
+  //       //setQty2('Найдено: ' + data.length);
+  //     })
+  //     .catch((error) => {
+  //       console.log("error: " + error);
+  //     });
+  // };
 
+  const fetchAll2 = () => {
+    //setLoading2(true);
+    setData(Employees.data);
+  };
   useEffect(() => {
-    fetchAll();
+    //fetchAll();
+    fetchAll2();
     console.log("first mounting");
   }, []);
 

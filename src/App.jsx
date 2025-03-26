@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button, Select } from "antd";
-import "./App.css";
+// import "./App.css";
 import Parent from "./Components/Parent";
 import MyDefault2, { MyDefault } from "./Functions";
 import P from "./Components/P";
