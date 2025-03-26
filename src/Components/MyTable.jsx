@@ -64,7 +64,6 @@ const MyTable = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data.data);
         setData(data.data);
         //setLoading2(false);
         //setQty2('Найдено: ' + data.length);
@@ -94,7 +93,13 @@ const MyTable = () => {
         columns={columns2}
         dataSource={data}
         size="small"
-        pagination={false}
+        // pagination={false}
+        pagination={{
+          position: ["topRight"],
+          showSizeChanger: true,
+          defaultPageSize: 10,
+          pageSizeOptions: ["10", "25", "50", "100", "200"],
+        }}
       />
     </>
   );
