@@ -10,7 +10,9 @@ const Ch_1 = () => {
 
   return (
     <div>
-      <button onClick={() => setInfo("hello step")}>Кнопка</button>
+      <button onClick={() => setInfo("hello step от сына")}>
+        Кнопка на сыне
+      </button>
       <Ch_1_1 />
     </div>
   );
