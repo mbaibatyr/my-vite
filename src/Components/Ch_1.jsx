@@ -10,6 +10,7 @@ const Ch_1 = () => {
 
   return (
     <div>
+      {info}
       <button onClick={() => setInfo("hello step от сына")}>
         Кнопка на сыне
       </button>

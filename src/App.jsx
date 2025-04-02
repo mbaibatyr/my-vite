@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import Ch_1 from "./Components/Ch_1";
 import Grid from "antd/es/card/Grid";
+import MyModal from "./Components/MyModal";
 const InfoContext = createContext(null);
 
 const App = () => {
@@ -8,13 +9,14 @@ const App = () => {
 
   return (
     <>
-      <InfoContext.Provider value={{ info, setInfo }}>
+      <MyModal />
+      {/* <InfoContext.Provider value={{ info, setInfo }}>
         <h1>{info}</h1>
         <button onClick={() => setInfo("hello step от деда")}>
           кнопка от деда
         </button>
         <Ch_1 />
-      </InfoContext.Provider>
+      </InfoContext.Provider> */}
     </>
   );
 };
