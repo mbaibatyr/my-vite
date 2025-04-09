@@ -30,7 +30,11 @@ const MyStyled = () => {
       <Button>Обычная кнопка</Button>
       <div className="myClass">Hello from css</div>
       <div style={myStyle}>Hello from myStyle</div>
-      <div style={{ color: "red" }}>Hello from localStyle</div>
+
+      <div style={{ color: "red", backgroundColor: "blue" }}>
+        Hello from localStyle
+      </div>
+
       <div class="alert alert-danger" role="alert">
         A simple danger alert—check it out!
       </div>
